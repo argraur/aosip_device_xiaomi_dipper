@@ -77,6 +77,9 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
 
 TARGET_EXFAT_DRIVER := exfat
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # System image size
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
