@@ -129,3 +129,7 @@ PRODUCT_PACKAGES += \
 # TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
 PRODUCT_PACKAGES += \
     vr_hwc
+
+# Offmode charging
+PRODUCT_PACKAGES += \
+    chargeonlymode
