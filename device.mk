@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
+# Lights
+PRODUCT_PACKAGES += \
+	android.hardware.light@2.0-service.xiaomi_sdm845
+
 # NFC
 PRODUCT_PACKAGES += \
 	NfcNci \
