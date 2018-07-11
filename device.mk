@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.qcom
 
+# Common init scripts
+PRODUCT_PACKAGES += \
+	init.qcom.rc
+
 # NFC
 PRODUCT_PACKAGES += \
 	NfcNci \
