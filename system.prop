@@ -40,7 +40,7 @@ ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 # SSR
-persist.vendor.sys.ssr.enable_ramdumps=1
+persist.vendor.sys.ssr.enable_ramdumps=0
 persist.vendor.sys.ssr.restart_level=ALL_ENABLE
 # WFD
 persist.debug.wfd.enable=1
