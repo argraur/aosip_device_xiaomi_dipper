@@ -1,3 +1,7 @@
+on init
+	mount none /system/lib64/hw/power.qcom.so /vendor/lib64/hw/power.qcom.so bind
+	mount none /system/lib/hw/power.qcom.so /vendor/lib/hw/power.qcom.so bind
+
 on post-fs
 	exec - root -- /system/bin/vndk-detect
 	exec - root -- /system/bin/rw-system.sh

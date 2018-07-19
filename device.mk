@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm845
 
+# Power
+PRODUCT_PACKAGES += \
+	power.qcom
+
 # NFC
 PRODUCT_PACKAGES += \
 	NfcNci \
