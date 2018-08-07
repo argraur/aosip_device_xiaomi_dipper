@@ -57,6 +57,9 @@ BOARD_USES_METADATA_PARTITION := true
 # Generic AOSP image does NOT support HWC1
 TARGET_USES_HWC2 := true
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
+
 # Set emulator framebuffer display device buffer count to 3
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
@@ -78,4 +81,3 @@ TARGET_EXFAT_DRIVER := exfat
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
 #SELINUX_IGNORE_NEVERALLOWS := true
-
