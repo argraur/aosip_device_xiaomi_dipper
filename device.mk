@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
+# Ambient Display
+PRODUCT_PACKAGES += \
+	XiaomiDoze
+
 # Lights
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm845
