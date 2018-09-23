@@ -369,4 +369,30 @@
 
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">MiPhone</string>
+
+    <!-- Add tethering support -->
+    <string-array name="config_tether_bluetooth_regexs">
+        <item>bnep\\d</item>
+        <item>bt-pan</item>
+    </string-array>
+    <integer-array name="config_tether_upstream_types">
+        <item>1</item>
+        <item>0</item>
+        <item>5</item>
+        <item>7</item>
+    </integer-array>
+    <string-array name="config_tether_usb_regexs">
+        <item>usb\\d</item>
+        <item>rndis\\d</item>
+    </string-array>
+    <string-array name="config_tether_wifi_regexs">
+        <item>softap0</item>
+        <item>wigig0</item>
+        <item>wifi_br0</item>
+    </string-array>
+    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_intrusiveNotificationLed">true</bool>
+    <!-- Multiuser -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+    <bool name="config_enableMultiUserUI">true</bool>
 </resources>
