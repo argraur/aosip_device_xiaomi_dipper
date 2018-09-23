@@ -37,7 +37,7 @@ static inline const char* BtmDefLocalName()
     // Fallback to ro.product.model
     return "";
 #endif
-    return "Pixel 2";
+    return "MI 8";
 }
 
 static inline int BtmBypassExtraAclSetup() {
