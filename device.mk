@@ -78,6 +78,11 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
+# NFC HALs
+PRODUCT_PACKAGES += \
+	android.hardware.nfc@1.0 \
+	android.hardware.nfc@1.1:64
+
 PRODUCT_COPY_FILES += \
 	device/xiaomi/dipper/twrp/twrp.rc:system/etc/init/twrp.rc \
 	device/xiaomi/dipper/twrp/twrp.sh:system/bin/twrp.sh \
