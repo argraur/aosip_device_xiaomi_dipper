@@ -395,4 +395,7 @@
     <!-- Multiuser -->
     <integer name="config_multiuserMaximumUsers">4</integer>
     <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Ambient display -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
 </resources>
