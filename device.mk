@@ -68,10 +68,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
-# LineageOS build may need this to make NFC work
-PRODUCT_PACKAGES += \
-        NfcNci
-
 PRODUCT_COPY_FILES += \
 	device/xiaomi/dipper/rw-system.sh:system/bin/rw-system.sh \
 	device/xiaomi/dipper/fixSPL/getSPL.arm:system/bin/getSPL
@@ -87,8 +83,11 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
-# NFC HALs
+# NFC
 PRODUCT_PACKAGES += \
+	NfcNci \
+	Tag \
+	com.android.nfc_extras \
 	android.hardware.nfc@1.0 \
 	android.hardware.nfc@1.1:64
 
