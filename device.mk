@@ -118,6 +118,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
 	device/xiaomi/dipper/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
+# Fingerprint navigation
+PRODUCT_COPY_FILES += \
+        device/xiaomi/dipper/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc \
+        device/xiaomi/dipper/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
+
 # NQNfcNci
 #PRODUCT_PACKAGES += \
 #	NQNfcNci \
