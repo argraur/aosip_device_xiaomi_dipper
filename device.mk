@@ -120,13 +120,7 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/dipper/audio_effects.conf:system/etc/audio_effects.conf \
 	device/xiaomi/dipper/audio_policy.conf:system/etc/audio_policy.conf
 
-# Treble GSI (import from build/target/product/treble_common*)
-
-# For now this will allow 64-bit apps, but still compile all apps with JNI
-# for 32-bit only.
-
-TARGET_SUPPORTS_32_BIT_APPS := true
-TARGET_SUPPORTS_64_BIT_APPS := true
+# Treble GSI (import from build/target/product/treble_common.mk)
 
 # Split selinux policy
 PRODUCT_FULL_TREBLE_OVERRIDE := true
