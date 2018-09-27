@@ -32,21 +32,6 @@ PRODUCT_COPY_FILES += \
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/dipper/overlay
 
-#Those overrides are here because Huawei's init read properties
-#from /system/etc/prop.default, then /vendor/build.prop, then /system/build.prop
-#So we need to set our props in prop.default
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	ro.build.version.sdk=$(PLATFORM_SDK_VERSION) \
-	ro.build.version.codename=$(PLATFORM_VERSION_CODENAME) \
-	ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
-	ro.build.version.release=$(PLATFORM_VERSION) \
-	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
-	ro.adb.secure=0
-
-#Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	persist.sys.usb.config=adb
-
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/xiaomi/dipper/vndk-detect:system/bin/vndk-detect \
@@ -56,9 +41,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
-PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/empty:system/phh/empty \
-	device/xiaomi/dipper/phh-on-boot.sh:system/bin/phh-on-boot.sh
+PRODUCT_COPY_FILES += device/xiaomi/dipper/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
 	treble-environ-rc
@@ -94,10 +77,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420
 
-# NFC
-PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/libnfc-nci.conf:system/etc/libnfc-nci.conf
-
 # Fingerprint navigation
 PRODUCT_COPY_FILES += \
         device/xiaomi/dipper/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc \
@@ -117,7 +96,7 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 # NFC:
 #   Provide default libnfc-nci.conf file for devices that does not have one in
 #   vendor/etc
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     device/generic/common/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
 # Name space configuration file for non-enforcing VNDK
