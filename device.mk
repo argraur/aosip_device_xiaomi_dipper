@@ -107,7 +107,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+	device/xiaomi/dipper/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
 # Fingerprint navigation
 PRODUCT_COPY_FILES += \
@@ -126,3 +126,28 @@ PRODUCT_COPY_FILES += \
 #       device/xiaomi/dipper-treble/proprietary/lib64/libnqnfc-nci.so:system/lib64/libnqnfc-nci.so \
 #       device/xiaomi/dipper-treble/proprietary/lib64/libnqnfc_nci_jni.so:system/lib64/libnqnfc_nci_jni.so \
 #       device/xiaomi/dipper-treble/proprietary/lib64/libnqp61-jcop-kit.so:system/lib64/libnqp61-jcop-kit.so
+
+# Treble GSI (import from build/target/product/treble_common*)
+
+# For now this will allow 64-bit apps, but still compile all apps with JNI
+# for 32-bit only.
+
+TARGET_SUPPORTS_32_BIT_APPS := true
+TARGET_SUPPORTS_64_BIT_APPS := true
+
+# Split selinux policy
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# NFC:
+#   Provide default libnfc-nci.conf file for devices that does not have one in
+#   vendor/etc
+#PRODUCT_COPY_FILES += \
+    device/generic/common/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
+
+# Name space configuration file for non-enforcing VNDK
+PRODUCT_PACKAGES += \
+    ld.config.vndk_lite.txt
+
+# TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
+PRODUCT_PACKAGES += \
+    vr_hwc
