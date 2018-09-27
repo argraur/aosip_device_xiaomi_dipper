@@ -114,18 +114,11 @@ PRODUCT_COPY_FILES += \
         device/xiaomi/dipper/uinput-goodix.idc:system/usr/idc/uinput-goodix.idc \
         device/xiaomi/dipper/uinput-goodix.kl:system/usr/keylayout/uinput-goodix.kl
 
-# NQNfcNci
-#PRODUCT_PACKAGES += \
-#	NQNfcNci \
-#	com.nxp.nfc.nq \
-#	NfcLinks
-
-#PRODUCT_COPY_FILES += \
-#       device/xiaomi/dipper-treble/proprietary/lib64/libnfc_ndef.so:system/lib64/libnfc_ndef.so \
-#       device/xiaomi/dipper-treble/proprietary/lib/libnfc_ndef.so:system/lib/libnfc_ndef.so \
-#       device/xiaomi/dipper-treble/proprietary/lib64/libnqnfc-nci.so:system/lib64/libnqnfc-nci.so \
-#       device/xiaomi/dipper-treble/proprietary/lib64/libnqnfc_nci_jni.so:system/lib64/libnqnfc_nci_jni.so \
-#       device/xiaomi/dipper-treble/proprietary/lib64/libnqp61-jcop-kit.so:system/lib64/libnqp61-jcop-kit.so
+# Audio configs
+PRODUCT_COPY_FILES += \
+	device/xiaomi/dipper/audio_diag.cfg:system/etc/audio_diag.cfg \
+	device/xiaomi/dipper/audio_effects.conf:system/etc/audio_effects.conf \
+	device/xiaomi/dipper/audio_policy.conf:system/etc/audio_policy.conf
 
 # Treble GSI (import from build/target/product/treble_common*)
 
