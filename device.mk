@@ -82,11 +82,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.0 \
 	android.hardware.nfc@1.1:64
 
-PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/twrp/twrp.rc:system/etc/init/twrp.rc \
-	device/xiaomi/dipper/twrp/twrp.sh:system/bin/twrp.sh \
-	device/xiaomi/dipper/twrp/busybox-armv7l:system/bin/busybox_phh
-
 ifneq (,$(wildcard external/exfat))
 PRODUCT_PACKAGES += \
 	mkfs.exfat \
