@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
 	com.android.nfc_extras \
+	libnfc \
 	android.hardware.nfc@1.0 \
 	android.hardware.nfc@1.1:64
 
