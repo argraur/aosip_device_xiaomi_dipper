@@ -32,9 +32,6 @@ PRODUCT_COPY_FILES += \
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/dipper/overlay
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
 #Those overrides are here because Huawei's init read properties
 #from /system/etc/prop.default, then /vendor/build.prop, then /system/build.prop
 #So we need to set our props in prop.default
