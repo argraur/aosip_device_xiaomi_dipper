@@ -41,7 +41,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
-PRODUCT_COPY_FILES += device/xiaomi/dipper/phh-on-boot.sh:system/bin/phh-on-boot.sh
+PRODUCT_COPY_FILES += \
+	device/xiaomi/dipper/rw-system.sh:system/bin/rw-system.sh \
+	device/xiaomi/dipper/fixSPL/getSPL.arm:system/bin/getSPL
+
+PRODUCT_COPY_FILES += \
+	device/xiaomi/dipper/empty:system/phh/empty \
+	device/xiaomi/dipper/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
 	treble-environ-rc
