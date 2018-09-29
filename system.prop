@@ -46,4 +46,4 @@ persist.vendor.sys.ssr.restart_level=ALL_ENABLE
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 # Brightness
-persist.sys.qcom-brightness=1023
+#persist.sys.qcom-brightness=1023
