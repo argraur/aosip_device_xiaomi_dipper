@@ -57,9 +57,6 @@ BOARD_USES_METADATA_PARTITION := true
 # Generic AOSP image does NOT support HWC1
 TARGET_USES_HWC2 := true
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
-
 # NFC
 TARGET_USES_NQ_NFC := true
 
@@ -84,3 +81,4 @@ TARGET_EXFAT_DRIVER := exfat
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
 #SELINUX_IGNORE_NEVERALLOWS := true
+
