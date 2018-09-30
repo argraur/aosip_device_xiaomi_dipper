@@ -58,7 +58,7 @@ BOARD_USES_METADATA_PARTITION := true
 TARGET_USES_HWC2 := true
 
 # NFC
-TARGET_USES_NQ_NFC := true
+TARGET_USES_NQ_NFC := false
 
 # Set emulator framebuffer display device buffer count to 3
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
