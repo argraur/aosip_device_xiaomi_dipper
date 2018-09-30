@@ -15,7 +15,7 @@
 #
 
 # Define TARGET_USES_NQ_NFC
-TARGET_USES_NQ_NFC := true
+TARGET_USES_NQ_NFC := false
 
 # Nfc config
 # This file is used to pick up NFC stuff
