@@ -60,6 +60,9 @@ TARGET_USES_HWC2 := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Set emulator framebuffer display device buffer count to 3
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 

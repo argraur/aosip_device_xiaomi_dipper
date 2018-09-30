@@ -68,42 +68,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	init.qcom.rc
 
-# == NFC START ==
-
-# Main service
-PRODUCT_PACKAGES += NQNfcNci
-
-# Main static libraries
+# NFC
 PRODUCT_PACKAGES += \
+	NQNfcNci \
 	libnqnfc-nci \
-	libnqnfc_nci_jni \
-	libnqp61-jcop-kit
-
-# Main HALs
-PRODUCT_PACKAGES += \
+	libnq_n
+	Tag \
+	com.android.nfc_extras \
 	android.hardware.nfc@1.0 \
-	android.hardware.nfc@1.1:64 \
-	vendor.nxp.hardware.nfc@1.0 \
-	vendor.nxp.nxpese@1.0 \
-	vendor.nxp.nxpnfc@1.0
-
-# Vendor HALs = TO BE REMOVED =
-PRODUCT_PACKAGES += \
-	android.hardware.nfc@1.1-service \
-	android.hardware.nfc@1.0-impl \
-	nfc_nci.nqx.default \
-	nfc_nci_nxp \
-	ese_spi_nxp
-
-# Main shared library
-PRODUCT_PACKAGES += com.nxp.nfc.nq
-
-# Main NFC configurations
-PRODUCT_PACKAGES += \
-	libnfc-nci.conf \
-	libnfc-nci_NCI2_0.conf
-
-# == NFC END ==
+	android.hardware.nfc@1.1:64
 
 ifneq (,$(wildcard external/exfat))
 PRODUCT_PACKAGES += \
@@ -138,6 +111,12 @@ PRODUCT_COPY_FILES += \
 
 # Split selinux policy
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# NFC:
+#   Provide default libnfc-nci.conf file for devices that does not have one in
+#   vendor/etc
+PRODUCT_COPY_FILES += \
+    device/generic/common/nfc/libnfc-nci.conf:system/etc/libnfc-nci.conf
 
 # Name space configuration file for non-enforcing VNDK
 PRODUCT_PACKAGES += \

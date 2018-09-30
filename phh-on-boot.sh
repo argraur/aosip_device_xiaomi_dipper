@@ -21,3 +21,10 @@ getprop | \
 if grep -qF android.hardware.boot /vendor/manifest.xml;then
 	bootctl mark-boot-successful
 fi
+
+# Double-Tap to Wake
+chown system:system /proc/touchpanel/wake_gesture
+chmod 0660 /proc/touchpanel/wake_gesture
+
+# Wi-Fi
+insmod /system/lib/modules/wlan.ko
