@@ -68,42 +68,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	init.qcom.rc
 
-# == NFC START ==
-
-# Main service
-PRODUCT_PACKAGES += NQNfcNci
-
-# Main static libraries
-PRODUCT_PACKAGES += \
-	libnqnfc-nci \
-	libnqnfc_nci_jni \
-	libnqp61-jcop-kit
-
-# Main HALs
-PRODUCT_PACKAGES += \
-	android.hardware.nfc@1.0 \
-	android.hardware.nfc@1.1:64 \
-	vendor.nxp.hardware.nfc@1.0 \
-	vendor.nxp.nxpese@1.0 \
-	vendor.nxp.nxpnfc@1.0
-
-# Vendor HALs = TO BE REMOVED =
-PRODUCT_PACKAGES += \
-	android.hardware.nfc@1.1-service \
-	android.hardware.nfc@1.0-impl \
-	nfc_nci.nqx.default \
-	nfc_nci_nxp \
-	ese_spi_nxp
-
-# Main shared library
-PRODUCT_PACKAGES += com.nxp.nfc.nq
-
-# Main NFC configurations
-PRODUCT_PACKAGES += \
-	libnfc-nci.conf \
-	libnfc-nci_NCI2_0.conf
-
-# == NFC END ==
+# NFC
+$(call inherit-product, device/xiaomi/dipper/device-nfc.mk)
 
 ifneq (,$(wildcard external/exfat))
 PRODUCT_PACKAGES += \
