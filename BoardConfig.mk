@@ -72,9 +72,6 @@ TARGET_SYSTEM_PROP := device/xiaomi/dipper/system.prop $(TARGET_SYSTEM_PROP)
 # SEPolicy Private
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
 
-# bdroid configuration
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/dipper/bluetooth
-
 TARGET_EXFAT_DRIVER := exfat
 
 # System image size
