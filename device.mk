@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
+<<<<<<< HEAD
 # Lights
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm845
@@ -67,6 +68,10 @@ PRODUCT_COPY_FILES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
 	init.qcom.rc
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/etc/manifest.xml
 
 # Recovery init scripts
 PRODUCT_COPY_FILES += \
