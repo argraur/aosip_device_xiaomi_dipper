@@ -49,3 +49,6 @@ persist.sys.wfd.virtual=0
 #persist.sys.qcom-brightness=1023
 # Audio
 persist.sys.overlay.devinputjack=true
+# NFC
+ro.hardware.nfc_nci=nqx.default
+ro.nfc.port=I2C

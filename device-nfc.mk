@@ -15,12 +15,22 @@
 #
 
 # Define TARGET_USES_NQ_NFC
-TARGET_USES_NQ_NFC := false
+TARGET_USES_NQ_NFC := true
 
 # Nfc config
 # This file is used to pick up NFC stuff
 # If TARGET_USES_NQ_NFC = true, pick NQNfc
 # If TARGET_USES_NQ_NFC = false or null, pick AOSP Nfc
+
+# Some packages are common for both
+# SE
+PRODUCT_PACKAGES += SecureElement
+
+# Tag
+PRODUCT_PACKAGES += Tag
+
+# NFC Extras
+PRODUCT_PACKAGES += com.android.nfc_extras
 
 ifeq ($(TARGET_USES_NQ_NFC),true)
 
@@ -41,14 +51,6 @@ PRODUCT_PACKAGES += \
         vendor.nxp.nxpese@1.0 \
         vendor.nxp.nxpnfc@1.0
 
-# Vendor HALs = TO BE REMOVED =
-PRODUCT_PACKAGES += \
-        android.hardware.nfc@1.1-service \
-        android.hardware.nfc@1.0-impl \
-        nfc_nci.nqx.default \
-        nfc_nci_nxp \
-        ese_spi_nxp
-
 # Main shared library
 PRODUCT_PACKAGES += com.nxp.nfc.nq
 
@@ -63,9 +65,6 @@ else
 
 # Main service
 PRODUCT_PACKAGES += NfcNci
-
-# Tag
-PRODUCT_PACKAGES += Tag
 
 # Main static libraries
 PRODUCT_PACKAGES += \
