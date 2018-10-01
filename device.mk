@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
+# Vulkan driver
+PRODUCT_PACKAGES += \
+    libvulkan
+
 # Lights
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm845
@@ -58,6 +62,13 @@ PRODUCT_COPY_FILES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
 	init.qcom.rc
+
+# RCS
+PRODUCT_PACKAGES += \
+    rcs_service_aidl \
+    rcs_service_aidl.xml \
+    rcs_service_api \
+    rcs_service_api.xml
 
 # NFC
 $(call inherit-product, device/xiaomi/dipper/device-nfc.mk)
