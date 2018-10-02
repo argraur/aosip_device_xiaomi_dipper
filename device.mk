@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
 # NFC
 $(call inherit-product, device/xiaomi/dipper/device-nfc.mk)
 
+# SIM
+PRODUCT_PACKAGES += Stk
+
 ifneq (,$(wildcard external/exfat))
 PRODUCT_PACKAGES += \
 	mkfs.exfat \
