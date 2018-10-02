@@ -92,6 +92,9 @@ PRODUCT_PACKAGES += telephony-ext
 # caf ims
 PRODUCT_PACKAGES += ims-ext-common
 
+# TextClassifier
+PRODUCT_PACKAGES += textclassifier.bundle1
+
 # AID/fs configs
 PRODUCT_PACKAGES += fs_config_files
 
