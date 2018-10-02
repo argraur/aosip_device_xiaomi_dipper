@@ -54,3 +54,5 @@ persist.sys.overlay.devinputjack=true
 # NFC
 ro.hardware.nfc_nci=nqx.default
 ro.nfc.port=I2C
+# Media
+audio.offload.video=true
