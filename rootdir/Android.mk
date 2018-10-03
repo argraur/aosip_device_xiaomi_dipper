@@ -4,8 +4,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.qcom.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/init
+LOCAL_SRC_FILES    := init.qcom.rc
+LOCAL_MODULE_PATH  := $(PRODUCT_OUT)/root/
 include $(BUILD_PREBUILT)
 
 # Offmode charging
