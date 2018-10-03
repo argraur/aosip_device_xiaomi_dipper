@@ -99,7 +99,7 @@ TARGET_EXFAT_DRIVER := exfat
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := device/xiaomi/dipper/config.fs
 
 # System image size
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
