@@ -108,3 +108,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/dipper/bluetooth/include
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/xiaomi/dipper/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
