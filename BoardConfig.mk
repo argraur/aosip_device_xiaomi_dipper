@@ -86,8 +86,12 @@ BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 # Dipper properties
 TARGET_SYSTEM_PROP := device/xiaomi/dipper/system.prop $(TARGET_SYSTEM_PROP)
 
-# SEPolicy Private
+# device private sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
+
+# QCOM common sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 
 TARGET_EXFAT_DRIVER := exfat
 
