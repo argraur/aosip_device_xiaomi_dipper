@@ -47,6 +47,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := sdm845
 
 # system.img is always ext4 with sparse option
 # GSI also includes make_f2fs to support userdata parition in f2fs
