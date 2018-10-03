@@ -72,8 +72,8 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
 # NFC
 TARGET_USES_NQ_NFC := true
 
-# Set emulator framebuffer display device buffer count to 3
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+# Set emulator framebuffer display device buffer count to 2
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 
 # VBMETA should be never used in Treble GSI
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
