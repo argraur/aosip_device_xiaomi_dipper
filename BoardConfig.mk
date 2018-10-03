@@ -86,6 +86,9 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
 
 TARGET_EXFAT_DRIVER := exfat
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
