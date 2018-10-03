@@ -63,6 +63,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	init.qcom.rc
 
+# Recovery init scripts
+PRODUCT_COPY_FILES += \
+	device/xiaomi/dipper/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+	device/xiaomi/dipper/rootdir/init.recovery.hardware.rc:root/init.recovery.hardware.rc
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
