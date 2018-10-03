@@ -45,9 +45,8 @@ BOARD_VNDK_VERSION := current
 TARGET_SYSTEM_PROP := build/make/target/board/treble_system.prop
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
-# Bootloader, kernel and recovery are not part of generic AOSP image
+# Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
 
 # system.img is always ext4 with sparse option
 # GSI also includes make_f2fs to support userdata parition in f2fs
