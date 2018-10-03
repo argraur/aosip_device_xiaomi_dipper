@@ -112,3 +112,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/dipper/bluetooth/in
 # Recovery
 TARGET_RECOVERY_FSTAB := device/xiaomi/dipper/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+
+# Audio
+USE_XML_AUDIO_POLICY_CONF := 1
