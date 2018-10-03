@@ -57,8 +57,8 @@ BOARD_USES_METADATA_PARTITION := true
 # Generic AOSP image does NOT support HWC1
 TARGET_USES_HWC2 := true
 
-# Audio
-USE_XML_AUDIO_POLICY_CONF := 1
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
 
 # NFC
 TARGET_USES_NQ_NFC := true
