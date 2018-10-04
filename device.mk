@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
 
+# Audio
+PRODUCT_PACKAGES += \
+	tinymix
+
 # Vulkan driver
 PRODUCT_PACKAGES += \
     libvulkan
