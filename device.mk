@@ -81,6 +81,12 @@ $(call inherit-product, device/xiaomi/dipper/device-nfc.mk)
 # SIM
 PRODUCT_PACKAGES += Stk
 
+# caf telephony
+PRODUCT_PACKAGES += telephony-ext
+
+# caf ims
+PRODUCT_PACKAGES += ims-ext-common
+
 # AID/fs configs
 PRODUCT_PACKAGES += fs_config_files
 
