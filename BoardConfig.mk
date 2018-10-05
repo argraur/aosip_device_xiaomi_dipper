@@ -95,9 +95,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 
 TARGET_EXFAT_DRIVER := exfat
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := device/xiaomi/dipper/config.fs
 
