@@ -93,9 +93,6 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 
-# Vendor sepolicy
-BOARD_SEPOLICY_DIRS += device/xiaomi/dipper/sepolicy/vendor
-
 TARGET_EXFAT_DRIVER := exfat
 
 # Filesystem
