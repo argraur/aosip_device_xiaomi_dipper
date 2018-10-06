@@ -30,6 +30,7 @@ vendor.iop.enable_uxe=0
 # RCS and IMS
 persist.rcs.supported=0
 persist.vendor.ims.disableUserAgent=0
+persist.radio.VT_HYBRID_ENABLE=1
 # RIL
 DEVICE_PROVISIONED=1
 persist.radio.flexmap_type=none
@@ -39,6 +40,7 @@ persist.vendor.radio.redir_party_num=1
 ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 # SSR
 persist.vendor.sys.ssr.enable_ramdumps=0
 persist.vendor.sys.ssr.restart_level=ALL_ENABLE
