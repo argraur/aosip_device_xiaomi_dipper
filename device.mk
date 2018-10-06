@@ -15,19 +15,11 @@
 # limitations under the License.
 #
 
-#Use a more decent APN config
-PRODUCT_COPY_FILES += \
-	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 #Huawei devices don't declare fingerprint and telephony hardware feature
 #TODO: Proper detection
 PRODUCT_COPY_FILES := \
 	frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
-#Use a more decent APN config
-PRODUCT_COPY_FILES += \
-	device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/dipper/overlay
@@ -147,3 +139,6 @@ PRODUCT_PACKAGES += \
 # Offmode charging
 PRODUCT_PACKAGES += \
     chargeonlymode
+
+# SPN
+PRODUCT_COPY_FILES += device/xiaomi/dipper/spn-conf.xml:system/etc/spn-conf.xml
