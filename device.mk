@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvulkan
 
-<<<<<<< HEAD
 # Lights
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.xiaomi_sdm845
@@ -63,7 +62,7 @@ PRODUCT_PACKAGES += \
 
 # Audio policy
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
+    $(LOCAL_PATH)/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -75,8 +74,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery init scripts
 PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/rootdir/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-	device/xiaomi/dipper/rootdir/init.recovery.hardware.rc:root/init.recovery.hardware.rc
+	device/xiaomi/dipper/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+	device/xiaomi/dipper/init.recovery.hardware.rc:root/init.recovery.hardware.rc
 
 # RCS
 PRODUCT_PACKAGES += \

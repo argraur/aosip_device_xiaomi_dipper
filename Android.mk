@@ -25,6 +25,25 @@ LOCAL_POST_INSTALL_CMD := \
 	sed -i -e 's?%SYSTEMSERVERCLASSPATH%?$(PRODUCT_SYSTEM_SERVER_CLASSPATH)?g' $(PRODUCT_OUT)/system/etc/init/init.treble-environ.rc
 include $(BUILD_PHONY_PACKAGE)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.qcom.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := init.qcom.rc
+LOCAL_MODULE_PATH  := $(PRODUCT_OUT)/root/
+include $(BUILD_PREBUILT)
+
+# Offmode charging
+include $(CLEAR_VARS)
+LOCAL_MODULE          := chargeonlymode
+LOCAL_MODULE_OWNER    := xiaomi
+LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT_SBIN)
+LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
+LOCAL_SRC_FILES       := chargeonlymode
+LOCAL_MODULE_TAGS     := optional
+LOCAL_MODULE_CLASS    := EXECUTABLES
+include $(BUILD_PREBUILT)
+
 ifneq ($(filter dipper, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))

@@ -101,13 +101,11 @@ TARGET_FS_CONFIG_GEN := device/xiaomi/dipper/config.fs
 # System image size
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 
-#SELINUX_IGNORE_NEVERALLOWS := true
-
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/dipper/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/dipper/bluetooth
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/xiaomi/dipper/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/xiaomi/dipper/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 # Audio
