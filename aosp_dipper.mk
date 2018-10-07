@@ -32,7 +32,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
 $(call inherit-product, device/xiaomi/dipper/device.mk)
-$(call inherit-product, vendor/xiaomi/dipper/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/dipper/device-vendor.mk)
 
 PRODUCT_PACKAGES += \
     Launcher3QuickStep \
