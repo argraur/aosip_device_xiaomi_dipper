@@ -88,6 +88,7 @@ TARGET_SYSTEM_PROP := device/xiaomi/dipper/system.prop $(TARGET_SYSTEM_PROP)
 
 # device private sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/public
 
 # QCOM common sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
