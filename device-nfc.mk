@@ -32,8 +32,6 @@ PRODUCT_PACKAGES += Tag
 # NFC Extras
 PRODUCT_PACKAGES += com.android.nfc_extras
 
-ifeq ($(TARGET_USES_NQ_NFC),true)
-
 # Main service
 PRODUCT_PACKAGES += NQNfcNci
 
@@ -58,29 +56,3 @@ PRODUCT_PACKAGES += com.nxp.nfc.nq
 PRODUCT_PACKAGES += \
         libnfc-nci.conf \
         libnfc-nci_NCI2_0.conf
-
-else
-
-# IF WE DONT USE NQ NFC, FALLBACK TO AOSP NFC
-
-# Main service
-PRODUCT_PACKAGES += NfcNci
-
-# Main static libraries
-PRODUCT_PACKAGES += \
-        libnfc-nci \
-        libnfc_nci_jni
-
-# Main shared libraries
-PRODUCT_PACKAGES += \
-        com.android.nfc_extras
-
-# HAL
-PRODUCT_PACKAGES += \
-        android.hardware.nfc@1.0 \
-        android.hardware.nfc@1.1:64
-
-# NFC NCI config
-PRODUCT_COPY_FILES += device/xiaomi/dipper/libnfc-nci.conf:system/etc/libnfc-nci.conf
-
-endif
