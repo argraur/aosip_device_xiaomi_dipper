@@ -119,9 +119,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio configs
 PRODUCT_COPY_FILES += \
-	device/xiaomi/dipper/audio_diag.cfg:system/etc/audio_diag.cfg \
-	device/xiaomi/dipper/audio_effects.conf:system/etc/audio_effects.conf \
-	device/xiaomi/dipper/audio_policy.conf:system/etc/audio_policy.conf
+	device/xiaomi/dipper/audio_effects.conf:system/etc/audio_effects.conf
 
 # Treble GSI (import from build/target/product/treble_common.mk)
 
