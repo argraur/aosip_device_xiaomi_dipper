@@ -142,3 +142,6 @@ PRODUCT_PACKAGES += \
 
 # SPN
 PRODUCT_COPY_FILES += device/xiaomi/dipper/spn-conf.xml:system/etc/spn-conf.xml
+
+# Kernel
+$(call inherit-product, device/xiaomi/dipper-kernel/device-kernel.mk)
