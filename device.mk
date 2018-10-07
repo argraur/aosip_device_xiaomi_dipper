@@ -140,6 +140,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     chargeonlymode
 
+# ADB
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp,adb
+
 # SPN
 PRODUCT_COPY_FILES += device/xiaomi/dipper/spn-conf.xml:system/etc/spn-conf.xml
 
