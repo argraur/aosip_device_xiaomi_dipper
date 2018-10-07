@@ -88,15 +88,15 @@ TARGET_SYSTEM_PROP := device/xiaomi/dipper/system.prop $(TARGET_SYSTEM_PROP)
 
 # device private sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/private
-BOARD_SEPOLICY_DIRS += \
-	device/xiaomi/dipper/vendor/common \
-	device/xiaomi/dipper/vendor/sdm845 \
-	device/xiaomi/dipper/vendor/ssg
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/xiaomi/dipper/sepolicy/public
 
 # QCOM common sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 BOARD_SEPOLICY_DIRS += \
+	device/qcom/sepolicy/vendor/common \
+	device/qcom/sepolicy/vendor/sdm845 \
+	device/qcom/sepolicy/vendor/ssg \
 	device/qcom/sepolicy/vendor/common/sysmonapp
 
 TARGET_EXFAT_DRIVER := exfat
