@@ -52,6 +52,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.qcom
 
+# Bluetooth configuration
+PRODUCT_COPY_FILES += \
+	device/xiaomi/dipper/bt_did.conf:system/etc/bluetooth/bt_did.conf \
+	device/xiaomi/dipper/bt_profile.conf:system/etc/bluetooth/bt_profile.conf \
+	device/xiaomi/dipper/bt_stack.conf:system/etc/bluetooth/bt_stack.conf \
+	device/xiaomi/dipper/internal_iot_devlist.conf:system/etc/bluetooth/internal_iot_devlist.conf \
+	device/xiaomi/dipper/interop_database.conf:system/etc/bluetooth/interop_database.conf
+
 # Audio policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
